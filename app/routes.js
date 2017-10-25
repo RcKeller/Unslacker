@@ -60,7 +60,7 @@ export default (store) => {
 
       <Route path='/login/:redirect' onEnter={loginCallbackPatch} component={LoginCallbackRoute} /> */}
 
-      <Route path='*' getComponent={SplitNotFound} />
+      {/* <Route path='*' getComponent={SplitNotFound} /> */}
     </Route>
   )
 }

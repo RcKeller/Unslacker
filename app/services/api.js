@@ -45,7 +45,7 @@ output:
 */
 const target = (model, options) => {
   //  Base URL, e.g. ...host/v1/proposals/:id
-  let url = `${endpoint}/${pluralize(model)}/${options.id ? options.id : ''}`
+  let url = `${endpoint}/${model}/${options.id ? options.id : ''}`
   //  Operator to prefix query string for joins, queries, ID specification etc
   let operator = '?'
   if (options.where) {

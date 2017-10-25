@@ -42,7 +42,6 @@
     "node": ">=6.x"
   },
   "dependencies": {
-    "antd": "^2.12.8",
     "babel-cli": "^6.24.1",
     "babel-core": "^6.24.1",
     "babel-loader": "^7.0.0",
@@ -82,8 +81,6 @@
     "generact": "^0.1.1",
     "helmet": "^3.5.0",
     "json-loader": "^0.5.4",
-    "less": "^2.7.2",
-    "less-loader": "^4.0.3",
     "lodash": "^4.17.4",
     "method-override": "^2.3.8",
     "mongoose": "^4.9.3",
