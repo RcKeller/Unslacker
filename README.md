@@ -74,9 +74,9 @@ I've got a manifest of all technologies in use (equivocal to `wtf.txt`) in STACK
   - [x] Develop new schema
   - [x] Create models
 - [x] Develop authentication strategies
-  - [] Production: Use passport-uwshib for secure UW NetID SAML authentication
+  - [] Production: Use passport-uwshib for secure UW username SAML authentication
       - [x] Create placeholder functions/config
-  - [x] Development: Use passport-google-oauth for "Psuedo-Auth" in development, create fake netid users. For testing.
+  - [x] Development: Use passport-google-oauth for "Psuedo-Auth" in development, create fake username users. For testing.
   - [x] Create authorization middlewares for CRUD operations
 - [x] Create core RESTful routes for standard CRUD
 - [x] Create test-data generator for populating lorem-ipsum on spinup.
