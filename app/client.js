@@ -39,5 +39,11 @@ match({routes, history}, (error, redirectLocation, renderProps) => {
   )
 })
 
-//  Load styles ASAP, preventing FOUT
+/*
+LOAD STYLES
+This is the soonest possible point to mount these scripts, preventing FOUT
+*/
 import './css/index.scss'
+//  ANTD and REACT-DATA-GRID
+import './css/antd.less'
+// import './css/grid.less'
