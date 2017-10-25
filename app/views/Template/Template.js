@@ -72,10 +72,10 @@ class Template extends React.Component {
       component: Link,
       to: '/'
     }, {
-      primaryText: 'About',
-      leftIcon: <FontIcon>person</FontIcon>,
+      primaryText: 'Example',
+      leftIcon: <FontIcon>web</FontIcon>,
       component: Link,
-      to: '/about/'
+      to: '/example'
     },
     { divider: true }]
     const AuthButton = (!user.authenticated

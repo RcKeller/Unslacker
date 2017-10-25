@@ -44,6 +44,6 @@ LOAD STYLES
 This is the soonest possible point to mount these scripts, preventing FOUT
 */
 import './css/index.scss'
-//  ANTD and REACT-DATA-GRID
-import './css/antd.less'
-// import './css/grid.less'
+//  REACT-DATA-GRID
+import './css/grid.scss'
+// import './css/antd.less'
