@@ -14,9 +14,10 @@ import { Paper } from 'react-md'
     db: state.db,
     config: state.config
   })),
-  connectRequest(() => api.get('user', {
-    select: ['username', 'email']
-  }))
+  connectRequest(() => api.get('quizzes'))
+  // connectRequest(() => api.get('user', {
+  //   select: ['username', 'email']
+  // }))
 )
 class FrontPage extends React.Component {
   render ({ user, db, config } = this.props) {

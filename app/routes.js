@@ -14,7 +14,8 @@ https://github.com/reactGo/reactGo/pull/841/files
 const SplitFrontPage = (l, c) => require.ensure([], () => c(null, require('./views/FrontPage/FrontPage').default))
 const SplitNotFound = (l, c) => require.ensure([], () => c(null, require('./views/NotFound/NotFound').default))
 const SplitExample = (l, c) => require.ensure([], () => c(null, require('./views/Example/Example').default))
-
+const SplitQuizzes = (l, c) => require.ensure([], () => c(null, require('./views/Quizzes/Quizzes').default))
+const SplitQuiz = (l, c) => require.ensure([], () => c(null, require('./views/Quizzes/Quiz/Quiz').default))
 /*
  * @param {Redux Store}
  * We require store as an argument here because we wish to get
@@ -40,6 +41,8 @@ export default (store) => {
     <Route path='/' component={Template} >
       <IndexRoute getComponent={SplitFrontPage} />
       <Route path='/example' onEnter={requireAuth} getComponent={SplitExample} />
+      <Route path='/quizzes' getComponent={SplitQuizzes} />
+      <Route path='/quizzes/:quiz' getComponent={SplitQuiz} />
 
       {/* <Route path='/faq' getComponent={SplitFAQ} />
       <Route path='/members' getComponent={SplitMembers} />
