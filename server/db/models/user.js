@@ -1,4 +1,3 @@
-// https://github.com/sahat/hackathon-starter
 import mongoose from 'mongoose'
 import faker from 'faker'
 
@@ -25,10 +24,11 @@ const dummyUsers = (min, ids, developer) => {
       let fakes = []
       for (let i = 0; i < min; i++) {
         fakes[i] = new User({
-          _id: ids.user[i],
+          _id: ids.User[i],
           name: faker.name.findName(),
           username: faker.internet.userName(),
-          email: faker.internet.email()
+          admin: false,
+          team: faker.company.catchPhrase()
         })
       }
       //  Create a special user for the webdev's profile

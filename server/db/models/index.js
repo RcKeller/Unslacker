@@ -6,6 +6,8 @@ export default function loadModels () {
   //  Auth/User & Meta data
   require('./config')
   require('./user')
+  require('./quiz')
+  require('./response')
 }
 
 /*
@@ -14,6 +16,8 @@ For express-restify-mongoose
 */
 import Config, { dummyConfigs } from './config'
 import User, { dummyUsers } from './user'
+import Quiz, { dummyQuizes } from './quiz'
+import Response, { dummyResponses } from './response'
 
-export { Config, User }
-export const restDummies = [ dummyConfigs, dummyUsers ]
+export { Config, User, Quiz, Response }
+export const restDummies = [ dummyConfigs, dummyUsers, dummyQuizes, dummyResponses ]

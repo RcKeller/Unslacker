@@ -10,7 +10,9 @@ export default function () {
 
   //  Generate an object containing ObjectIds for dummy objects.
   const ids = {
-    user: []
+    User: [],
+    Quiz: [],
+    Response: []
   }
   Object.keys(ids).forEach((key) => {
     for (let i = 0; i < min; i++) {
@@ -22,7 +24,8 @@ export default function () {
     _id,
     name: 'Ryan Keller',
     username: 'rykeller',
-    email: 'rykeller@uw.edu'
+    admin: true,
+    team: ''
   }
   //  Create dummies for all RESTful models
   restDummies.map((model) => model(min, ids, developer))
