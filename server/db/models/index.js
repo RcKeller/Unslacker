@@ -16,8 +16,8 @@ For express-restify-mongoose
 */
 import Config, { dummyConfigs } from './config'
 import User, { dummyUsers } from './user'
-import Quiz, { dummyQuizes } from './quiz'
+import Quiz, { dummyQuizzes } from './quiz'
 import Response, { dummyResponses } from './response'
 
 export { Config, User, Quiz, Response }
-export const restDummies = [ dummyConfigs, dummyUsers, dummyQuizes, dummyResponses ]
+export const restDummies = [ dummyConfigs, dummyUsers, dummyQuizzes, dummyResponses ]

@@ -1,7 +1,7 @@
 import REST from './restify'
 import { Quiz } from '../models'
 
-export default class Quizes extends REST {
+export default class Quizzes extends REST {
   constructor () {
     super(Quiz)
   }

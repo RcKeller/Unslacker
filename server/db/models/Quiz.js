@@ -14,7 +14,7 @@ export default Quiz
 /* *****
 FAKE DATA GENERATOR: Quiz
 ******/
-const dummyQuizes = (min, ids, developer) => {
+const dummyQuizzes = (min, ids, developer) => {
   //  Check the db for existing data satisfying min required
   Quiz.count().exec((err, count) => {
     if (err) {
@@ -44,4 +44,4 @@ const dummyQuizes = (min, ids, developer) => {
     }
   })
 }
-export { dummyQuizes }
+export { dummyQuizzes }
