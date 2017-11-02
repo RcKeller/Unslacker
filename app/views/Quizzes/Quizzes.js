@@ -26,7 +26,6 @@ class Quizzes extends React.Component {
         <Paper zIndex={1}>
           <section>
             <h3>Quizzes</h3>
-            {/* <code>{JSON.stringify(quizzes)}</code> */}
             <ul>
               {quizzes.map((q, i) => (
                 <li key={i}>

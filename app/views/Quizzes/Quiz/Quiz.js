@@ -12,21 +12,35 @@ import { Paper } from 'react-md'
   connect(state => ({
     config: state.config,
     user: state.user,
-    responses: state.db.responses
+    quiz: state.db.quiz || {}
   })),
-  connectRequest((props) => api.get('responses', {
-    query: { quiz: props.params.quiz }
+  connectRequest((props) => api.get('quiz', {
+    id: props.params.id,
+    populate: [{ path: 'responses', populate: { path: 'user' } }]
   }))
 )
 class Quiz extends React.Component {
-  render ({ user, db, responses } = this.props) {
+  render ({ user, db, quiz } = this.props) {
+    const { title, body, responses } = quiz
     return (
       <article>
         <Helmet title='Home' />
         <Paper zIndex={1}>
           <section>
-            <h3>Quizzes</h3>
-            <code>{JSON.stringify(responses)}</code>
+            <h3>{title || 'Untitled Quiz'}</h3>
+            <code>{body}</code>
+            <hr />
+            <h2>Responses:</h2>
+            {responses && responses.map((r, i) => (
+              <div>
+                <b>{r.user ? `${r.user.name}: ` : 'Anonymous: '}</b>
+                <em>{r.title}</em>
+                <p>{r.body}</p>
+              </div>
+              // <code>
+              //   {JSON.stringify(r)}
+              // </code>
+            ))}
           </section>
         </Paper>
       </article>

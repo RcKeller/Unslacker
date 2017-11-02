@@ -42,7 +42,7 @@ export default (store) => {
       <IndexRoute getComponent={SplitFrontPage} />
       <Route path='/example' onEnter={requireAuth} getComponent={SplitExample} />
       <Route path='/quizzes' getComponent={SplitQuizzes} />
-      <Route path='/quizzes/:quiz' getComponent={SplitQuiz} />
+      <Route path='/quizzes/:id' getComponent={SplitQuiz} />
 
       {/* <Route path='/faq' getComponent={SplitFAQ} />
       <Route path='/members' getComponent={SplitMembers} />
