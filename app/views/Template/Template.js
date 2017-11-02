@@ -72,6 +72,11 @@ class Template extends React.Component {
       component: Link,
       to: '/'
     }, {
+      primaryText: 'Quizzes',
+      leftIcon: <FontIcon>web</FontIcon>,
+      component: Link,
+      to: '/quizzes'
+    }, {
       primaryText: 'Example',
       leftIcon: <FontIcon>web</FontIcon>,
       component: Link,

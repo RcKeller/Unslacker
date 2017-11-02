@@ -4,6 +4,8 @@ import { compose } from 'redux'
 import { connect } from 'react-redux'
 import { connectRequest } from 'redux-query'
 
+import { Link } from 'react-router'
+
 import api from '../../services'
 
 import { Paper } from 'react-md'
@@ -12,7 +14,7 @@ import { Paper } from 'react-md'
   connect(state => ({
     config: state.config,
     user: state.user,
-    quizzes: state.db.quizzes
+    quizzes: state.db.quizzes || []
   })),
   connectRequest(() => api.get('quizzes'))
 )
@@ -24,7 +26,18 @@ class Quizzes extends React.Component {
         <Paper zIndex={1}>
           <section>
             <h3>Quizzes</h3>
-            <code>{JSON.stringify(quizzes)}</code>
+            {/* <code>{JSON.stringify(quizzes)}</code> */}
+            <ul>
+              {quizzes.map((q, i) => (
+                <li key={i}>
+                  <Link
+                    to={`/quizzes/${q._id}`}
+                  >
+                    {q.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </section>
         </Paper>
       </article>
