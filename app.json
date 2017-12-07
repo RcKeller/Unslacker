@@ -1,10 +1,26 @@
 {
-  "name": "React Node Express Mongo",
-  "description": "A barebones Node.js app using Express 4 with MongoDB, and ReactJS in Flux, using Webpack as a module bundler",
-  "repository": "https://github.com/choonkending/react-webpack-node",
-  "logo": "https://node-js-sample.herokuapp.com/node.svg",
-  "keywords": ["node", "express", "static", "react", "webpack", "mongodb"],
-  "addons" : [
-  	"mongolab"
-  ]
+  "name": "Botkit Starter Kit",
+  "description": "A starting point for building custom Slack applications",
+  "repository": "https://github.com/howdyai/botkit-starter-slack",
+  "keywords": ["node", "bots", "slack","botkit"],
+  "website": "https://studio.botkit.ai/",
+  "success_url":"/",
+  "addons":[
+    {
+      "plan": "mongolab",
+      "as": "MONGO"
+    }
+  ],
+  "env": {
+      "clientId": {
+          "description": "Client ID provided by Slack"
+      },
+      "clientSecret": {
+          "description": "Client Secret provided by Slack"
+      },
+      "studio_token": {
+          "description": "Token associated with your bot in Botkit Studio",
+          "required":false
+      }
+  }
 }
